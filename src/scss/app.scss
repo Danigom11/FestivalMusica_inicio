@@ -1,0 +1,7 @@
+// Antigüa sintaxis de importar código de otros archivos
+// @import lo hace disponible en todas los archivos
+//@import 'base/variables';
+//@import 'contenido/contenido';
+// Nueva manera de importar código de otros archivos
+@use 'base';
+@use 'layout'
