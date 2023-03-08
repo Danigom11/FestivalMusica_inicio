@@ -6,11 +6,11 @@ const sass = require("gulp-sass")(require("sass"));
 // plumber es para que no se detenga el watch si hay un error
 const plumber = require('gulp-plumber');
 // para mejorar el código css
-const autoprefixer = require('autoprefixer');
-const cssnano = require('cssnano');
-const postcss = require('gulp-postcss');
+//const autoprefixer = require('autoprefixer');
+//const cssnano = require('cssnano');
+//const postcss = require('gulp-postcss');
 // para identificar el código css una vez compactado en una linea con lo anterior
-const sourcemaps = require('gulp-sourcemaps');
+//const sourcemaps = require('gulp-sourcemaps');
 
 // Imágenes
 const cache = require('gulp-cache');
@@ -27,11 +27,11 @@ function css(done) {
   // Compilarlo con .pipe( sass()) importado de sass
   // Almacenarla en el disco duro
   src("src/scss/**/*.scss") // Identifica
-    .pipe(sourcemaps.init())
+    //.pipe(sourcemaps.init())
     .pipe(plumber()) // usa plumb para no detener código si hay un error
     .pipe(sass()) // Compila
-    .pipe( postcss([autoprefixer(), cssnano()]))
-    .pipe(sourcemaps.write('.'))
+    //.pipe( postcss([autoprefixer(), cssnano()]))
+    //.pipe(sourcemaps.write('.'))
     .pipe(dest("build/css")) // Guarda
   
   done(); // Callback que avisa a gulp cuando llegamos al final
@@ -71,9 +71,9 @@ function versionAvif( done ) {
 
 function javascript( done ) {
   src('src/js/**/*.js')
-    .pipe(sourcemaps.init())
+    //.pipe(sourcemaps.init())
     .pipe( terser())
-    .pipe(sourcemaps.write('.'))
+    //.pipe(sourcemaps.write('.'))
     .pipe(dest('build/js'));
   
     done();
@@ -91,4 +91,4 @@ exports.js = javascript;
 exports.imagenes = imagenes;
 exports.versionWebp = versionWebp;
 exports.versionAvif = versionAvif;
-exports.dev = parallel( imagenes, versionWebp, versionAvif, javascript, dev);
+exports.dev = parallel(css, imagenes, versionWebp, versionAvif, javascript, dev);

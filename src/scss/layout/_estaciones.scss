@@ -1,0 +1,70 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.elige {
+    padding: 2rem;
+    color: v.$blanco;
+    font-size: 2rem;
+    display: block;
+    text-align: center;
+}
+
+.contenedor {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    @include m.desktop {
+      grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
+
+      
+    }
+    gap: 2rem;
+    padding-top: 0;
+}
+
+.item {
+    display: block;
+    justify-content: center;
+    border-radius: 0.8rem;
+    height: 30rem;
+}
+
+.nombre-estacion {
+    margin-top: 0rem;
+    display: block;
+    text-align: center;
+    color: v.$negro;
+    font-family: v.$fuente_estacion;
+    padding-top: 1rem;
+    font-size: 3rem;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.bg-primavera {
+  background-image: url(../../build/img/primavera.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.bg-verano{
+  background-image: url(../../build/img/verano.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.bg-otono {
+  background-image: url(../../build/img/otono.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.bg-invierno {
+  background-image: url(../../build/img/invierno.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
