@@ -1,5 +1,6 @@
 .fondo {
-  background: rgb(98, 125, 77);
+  background: rgb(98, 125, 77) no-repeat center center fixed;
+  background-size: cover;
   background: -moz-linear-gradient(45deg, rgb(98, 125, 77) 0%, rgb(31, 59, 8) 100%);
   background: -webkit-gradient(left bottom, right top, color-stop(0%, rgb(98, 125, 77)), color-stop(100%, rgb(31, 59, 8)));
   background: -webkit-linear-gradient(45deg, rgb(98, 125, 77) 0%, rgb(31, 59, 8) 100%);
@@ -321,6 +322,9 @@ template {
 html {
   font-size: 62.5%;
   box-sizing: border-box;
+  width: 100%;
+  height: max-content;
+  min-height: 100vh;
 }
 
 *,
@@ -332,6 +336,12 @@ html {
 body {
   font-family: "Montserrat", sans-serif;
   font-size: 1.6rem;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  zoom: 1.3;
 }
 body.fijar-body {
   overflow: hidden;
@@ -356,7 +366,9 @@ a {
   text-decoration: none;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   margin: 0 0 0rem 0;
 }
 
@@ -395,29 +407,77 @@ img {
   text-align: center;
 }
 
+* {
+  margin: 0;
+}
+
 .contenedor {
+  width: 95%;
+  max-width: 120rem;
+  margin: 0 auto;
   display: grid;
-  justify-content: center;
-  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  justify-items: center;
   gap: 2rem;
   padding-top: 0;
 }
 @media (min-width: 992px) {
   .contenedor {
-    grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }
-
-.item {
-  display: block;
+.contenedor .item-primavera {
+  background-image: url(../../build/img/primavera.webp);
   justify-content: center;
-  border-radius: 0.8rem;
+  border-radius: 3rem;
   height: 30rem;
+  width: 30rem;
+  padding: 0rem;
+  background-size: cover;
+  background-position: center center;
+  justify-content: center;
+  gap: 2rem;
+}
+.contenedor .item-verano {
+  background-image: url(../../build/img/verano.webp);
+  justify-content: center;
+  border-radius: 3rem;
+  height: 30rem;
+  width: 30rem;
+  padding: 0rem;
+  background-size: cover;
+  background-position: center center;
+  justify-content: center;
+  gap: 2rem;
+}
+.contenedor .item-otono {
+  background-image: url(../../build/img/otono.webp);
+  justify-content: center;
+  border-radius: 3rem;
+  height: 30rem;
+  width: 30rem;
+  padding: 0rem;
+  background-size: cover;
+  background-position: center center;
+  justify-content: center;
+  gap: 2rem;
+}
+.contenedor .item-invierno {
+  background-image: url(../../build/img/invierno.webp);
+  justify-content: center;
+  border-radius: 3rem;
+  height: 30rem;
+  width: 30rem;
+  padding: 0rem;
+  background-size: cover;
+  background-position: center center;
+  justify-content: center;
+  gap: 2rem;
 }
 
 .nombre-estacion {
-  margin-top: 0rem;
-  display: block;
+  margin: 0rem;
   text-align: center;
   color: #000000;
   font-family: "Cinzel", serif;
@@ -427,38 +487,80 @@ img {
   font-weight: 700;
 }
 
-.bg-primavera {
-  background-image: url(../../build/img/primavera.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-}
-
-.bg-verano {
-  background-image: url(../../build/img/verano.png);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-}
-
-.bg-otono {
-  background-image: url(../../build/img/otono.png);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-}
-
-.bg-invierno {
-  background-image: url(../../build/img/invierno.png);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-}
-
 .footer {
-  padding: 1rem;
+  padding: 3rem;
 }
 .footer p {
   text-align: center;
   color: #ffffff;
+}
+
+.dificultades {
+  width: 95%;
+  max-width: 120rem;
+  margin: 0 auto;
+  display: grid;
+  justify-items: center;
+  gap: 2rem;
+  padding-top: 0;
+}
+@media (min-width: 992px) {
+  .dificultades {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.dificultad {
+  background-color: #ffffff;
+  justify-content: center;
+  border-radius: 3rem;
+  height: 30rem;
+  width: 30rem;
+  padding: 2rem;
+}
+.dificultad .dificultad-nombre {
+  margin: 0rem;
+  padding-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+  text-transform: uppercase;
+  font-weight: 800;
+}
+.dificultad .dificultad-explicacion {
+  padding-bottom: 1.5rem;
+  text-align: center;
+  font-weight: 100;
+  font-size: 1.4rem;
+  margin: 0rem;
+}
+
+* {
+  margin: auto;
+}
+
+.productos {
+  display: grid;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 2rem;
+  width: 25rem;
+}
+.productos .producto {
+  display: block;
+  margin: auto;
+}
+.productos .producto .producto-imagen {
+  width: 5rem;
+  height: 5rem;
+}
+.productos .producto .producto-texto {
+  margin-top: 1rem;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 500;
 }

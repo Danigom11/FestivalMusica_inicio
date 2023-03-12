@@ -1,8 +1,8 @@
 // Tipografía
 $fuente_principal: "Montserrat", sans-serif;
-$fuente_estacion: 'Cinzel', serif;
+$fuente_estacion: "Cinzel", serif;
 // Colores
-$verde: #4cb8b3;
+$verde: rgb(227, 237, 219);
 $rosa: #f53756;
 $rojo: #f5072f;
 $amarillo: #fef46d;
@@ -12,14 +12,43 @@ $blanco: #ffffff;
 $gris: #968e8e;
 
 .fondo {
-    background: rgba(98,125,77,1);
-background: -moz-linear-gradient(45deg, rgba(98,125,77,1) 0%, rgba(31,59,8,1) 100%);
-background: -webkit-gradient(left bottom, right top, color-stop(0%, rgba(98,125,77,1)), color-stop(100%, rgba(31,59,8,1)));
-background: -webkit-linear-gradient(45deg, rgba(98,125,77,1) 0%, rgba(31,59,8,1) 100%);
-background: -o-linear-gradient(45deg, rgba(98,125,77,1) 0%, rgba(31,59,8,1) 100%);
-background: -ms-linear-gradient(45deg, rgba(98,125,77,1) 0%, rgba(31,59,8,1) 100%);
-background: linear-gradient(45deg, rgba(98,125,77,1) 0%, rgba(31,59,8,1) 100%);
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#627d4d', endColorstr='#1f3b08', GradientType=1 );}
+  background: rgba(98, 125, 77, 1) no-repeat center center fixed;
+  background-size: cover;
+  background: -moz-linear-gradient(
+    45deg,
+    rgba(98, 125, 77, 1) 0%,
+    rgba(31, 59, 8, 1) 100%
+  );
+  background: -webkit-gradient(
+    left bottom,
+    right top,
+    color-stop(0%, rgba(98, 125, 77, 1)),
+    color-stop(100%, rgba(31, 59, 8, 1))
+  );
+  background: -webkit-linear-gradient(
+    45deg,
+    rgba(98, 125, 77, 1) 0%,
+    rgba(31, 59, 8, 1) 100%
+  );
+  background: -o-linear-gradient(
+    45deg,
+    rgba(98, 125, 77, 1) 0%,
+    rgba(31, 59, 8, 1) 100%
+  );
+  background: -ms-linear-gradient(
+    45deg,
+    rgba(98, 125, 77, 1) 0%,
+    rgba(31, 59, 8, 1) 100%
+  );
+  background: linear-gradient(
+    45deg,
+    rgba(98, 125, 77, 1) 0%,
+    rgba(31, 59, 8, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#627d4d', endColorstr='#1f3b08', GradientType=1 );
+
+
+}
 
 // Tamaños de Media Queries
 $telefono: 480px;

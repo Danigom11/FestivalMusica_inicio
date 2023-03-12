@@ -1,10 +1,10 @@
-@use 'base/variables' as v;
-@use 'base/mixins' as m;
+@use "base/variables" as v;
+@use "base/mixins" as m;
 
 .header {
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    display: block;
-    text-align: center;
-    color: v.$blanco;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  display: block;
+  text-align: center;
+  color: v.$blanco;
 }
